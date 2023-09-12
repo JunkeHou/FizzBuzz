@@ -1,9 +1,11 @@
 public class Multiples {
     public static void main(String[] args) {
+        int count = 0;
         for (int i = 1; i < 1000; i++) {
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
-            boolean divisibleBy35 = divisibleBy3 && divisibleBy5;
+            if (i % 3 == 0 || i % 5 == 0) {
+                count++;
+            }
         }
+        System.out.println("The number of multiples of 3 or 5 below 1000 is: " + count);
     }
 }
